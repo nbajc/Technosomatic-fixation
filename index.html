@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixation: Shower Cubicle — ZWISCHENLAND Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 60px 40px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 24px;
+            }
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* HEADER / LOGO */
+        .header {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #D4007A;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* TITLE SECTION */
+        .title-section {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #D4007A;
+            padding-bottom: 40px;
+        }
+
+        .title-section h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .title-section .subtitle {
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #999999;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .title-section h1 {
+                font-size: 32px;
+            }
+        }
+
+        /* HERO IMAGE */
+        .hero-image {
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #1a1a1a, #0A0A0A);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-caption {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: #666666;
+            margin-top: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        /* SECTIONS */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #D4007A;
+            margin: 80px 0;
+        }
+
+        .section h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #D4007A;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .section p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            color: #FFFFFF;
+        }
+
+        .section p + p {
+            margin-top: 18px;
+        }
+
+        /* LONG STATEMENT */
+        .long-statement p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .long-statement h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #D4007A;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        /* SHORT STATEMENT */
+        .short-statement {
+            background: rgba(212, 0, 122, 0.05);
+            padding: 40px;
+            border-left: 3px solid #D4007A;
+        }
+
+        .short-statement p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .short-statement p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* BIO SECTION */
+        .bio-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .bio-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .bio-portrait {
+            position: sticky;
+            top: 40px;
+        }
+
+        .bio-portrait img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .bio-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .bio-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            color: #D4007A;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .bio-content p {
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: #CCCCCC;
+        }
+
+        .bio-content p:last-of-type {
+            margin-bottom: 32px;
+        }
+
+        .bio-links {
+            margin-top: 32px;
+        }
+
+        .bio-links-section {
+            margin-bottom: 28px;
+        }
+
+        .bio-links-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #D4007A;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 700;
+            display: block;
+        }
+
+        .bio-links-list {
+            list-style: none;
+        }
+
+        .bio-links-list li {
+            margin-bottom: 8px;
+        }
+
+        .bio-links-list a {
+            font-size: 12px;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-bottom: 1px solid #D4007A;
+            transition: color 0.2s;
+        }
+
+        .bio-links-list a:hover {
+            color: #D4007A;
+        }
+
+        .bio-contact {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid #333333;
+        }
+
+        .bio-contact a {
+            display: block;
+            font-size: 12px;
+            color: #FFFFFF;
+            text-decoration: none;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #D4007A;
+            width: fit-content;
+            transition: color 0.2s;
+        }
+
+        .bio-contact a:hover {
+            color: #D4007A;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 1px solid #D4007A;
+            margin-top: 80px;
+            padding-top: 40px;
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #666666;
+            text-transform: uppercase;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                padding: 40px;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            .section-divider {
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">◇ Technosomatic Architecture</div>
+        </div>
+
+        <!-- TITLE -->
+        <div class="title-section">
+            <h1>Fixation: Shower Cubicle</h1>
+            <div class="subtitle">ZWISCHENLAND · Friends Gallery Zurich · 2026</div>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="hero-image">
+            <img src="gaze-blurred.jpg" alt="Fixation: Shower Cubicle — eye-tracked sharp window revealing male figure in blurred shower environment">
+            <div class="hero-caption">Fig. 01 — Fixation: Shower Cubicle · Eye-tracking installation · Tobii Eye Tracker 5 · Short-throw projection · Unity · 2026</div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- LONG THEORETICAL STATEMENT -->
+        <div class="section long-statement">
+            <h2>Full Theoretical Statement</h2>
+
+            <h3>I. The Problem of Coherence Under Observation</h3>
+            <p>Merleau-Ponty writes that the body is the subject's mode of having a world. But in the contemporary moment, the body is also the object of continuous quantification, fragmentation, mapping—tracked across physical space and digital infrastructure simultaneously. <strong>Technosomatic Architecture is the inquiry into this collapse: where does embodied phenomenological presence end, and where does the archive of that presence begin?</strong> They are not sequential. They are <em>contemporaneous</em>. You are being embodied and being recorded in the same instant.</p>
+
+            <p>The shower is the site where this collapse becomes most acute. Shower cubicles are designed for a paradox: retreat from public view that is architecturally <em>incomplete</em>—water sounds carry, doors don't fully close, mirrors involuntarily expose, tiling records traces of every body that has occupied the space. The shower is both the most private act (bodily exposure, vulnerability, the body in process) and structurally penetrable (open to inference, reconstruction, surveillance, the gaze of others).</p>
+
+            <p>But there is a third register: the <em>digital</em> reconstruction of that presence. In the contemporary moment, your body in the shower is not only phenomenologically present and architecturally exposed—it is also <em>potentially mapped</em>. Tracked. Archived. The shower cubicle is no longer a bounded space. It is a point on a digital map of presence, a data-point in a surveillance infrastructure, a fragment in a larger narrative of "you."</p>
+
+            <p><strong>This piece asks: What remains coherent when presence is simultaneously embodied, exposed, and archived?</strong></p>
+
+            <h3>II. Fixation as Double Apparatus</h3>
+            <p>Lacan distinguishes between vision (the eye's transparency) and the gaze (the structure of being seen that precedes any individual seeing). Mulvey extends this: the female gaze is not an alternative vision but an active <em>refusal</em> of the male body's claim to coherence under observation. She looks, and in looking, she shatters the fantasy that the male body is a unified object of desire.</p>
+
+            <p>But there is a fourth term that neither Lacan nor Mulvey fully theorize in the digital age: <strong>the tracking apparatus</strong>. When you look at Declan in the shower, two things happen simultaneously:</p>
+
+            <p><strong>1. Phenomenological fixation:</strong> Your eye locks onto a point. Merleau-Ponty's intentionality—the body's directedness toward the world. You are <em>present</em> in the act of looking; your presence is somatic, embodied, temporal.</p>
+
+            <p><strong>2. Digital fixation:</strong> The eye-tracker records your gaze point. It maps where you are looking. It archives the trace of your attention. You are simultaneously <em>being looked at</em> by the apparatus—your presence is being quantified, recorded, stitched into a data-narrative of "viewer."</p>
+
+            <p><strong>These are not separate acts.</strong> They are the same moment, split into two registers. The female gaze here is not pure phenomenological presence. It is the <em>collapse</em> of phenomenological presence into surveillance tracking. The female gaze becomes: <em>the act of being tracked while tracking</em>.</p>
+
+            <h3>III. The Supposition from Fragments</h3>
+            <p>Kristeva writes of the body as archive—a site where time is inscribed, where history lives in flesh, where presence is always already past. Declan's body in the shower is such an archive: 40,000+ photographs across three years of real chronological aging, real physiological change, real temporal accumulation.</p>
+
+            <p>But the work does not present these fragments sequentially. It does not say "look at how he ages." Instead, it performs something more radical: <strong>it makes visible the act of suppositional coherence that transforms fragments into a narrative of identity</strong>.</p>
+
+            <p>At every moment you fixate, the image appears stable. You see Declan. You construct a coherence: <em>here is a body, here is a presence, here is a continuity</em>. This is Lacan's sujet supposé savoir inverted—you, the viewer, become the subject who <em>supposes</em> the image to have coherence it does not possess.</p>
+
+            <p>But the mechanism works at sub-threshold. While you are looking, pixels at the periphery—the regions you are not attending to—are continuously mutating. Declan's face is already shifting. The surface state is already becoming something else. The micro-expressions are already morphing. The age-markers are already drifting. <strong>You do not see this. You cannot see this while you are looking.</strong> Your fixation <em>suppresses</em> the visibility of flux. The act of attending to a point creates the illusion that the whole is stable.</p>
+
+            <p>The moment your gaze moves—the saccade that takes your attention elsewhere—the mutation becomes visible. The point you were just fixating on has transformed. The face you supposed was continuous has revealed itself as discontinuous. The "whole" you constructed has dissolved.</p>
+
+            <h3>IV. Narrative as Supposition, Always Stitched from Flux</h3>
+            <p>We construct narratives of coherence constantly. <em>That is a person. He has an identity. His presence persists.</em> These are suppositions—necessary fictions we build from fragments that are always in flux.</p>
+
+            <p>But the contemporary moment adds a layer: <strong>narratives are not only constructed by individual consciousness. They are stitched in the minds of systems that are tracking you.</strong></p>
+
+            <p>Every time you fixate, the eye-tracker records your gaze point. Accumulated across multiple viewers, a heatmap emerges: <em>here is where people look most often. Here is the point of maximum collective attention.</em> A narrative of desire, of anatomical interest, of visual strategy emerges—not from any one viewer's intention, but from the aggregate data of many lookings.</p>
+
+            <h3>V. The Shower as Site of Collapse</h3>
+            <p>ZWISCHENLAND proposes that the exhibition space is "not solely geographical... simultaneously social, emotional, physical, and digital."</p>
+
+            <p>The shower cubicle is the quintessential site where these four registers collapse: physical (water, tiling, bodily exposure), social (structurally penetrable), emotional (vulnerability, the fantasy of privacy), and digital (eye-tracker, generative pipeline, the archive of looking).</p>
+
+            <p>In this piece, these four registers do not exist in parallel. They <em>interpenetrate at the level of the gaze</em>. Your fixation is simultaneously a phenomenological act, a visual strategy, a tracking event, and a narrativizing act.</p>
+
+            <h3>VI. The Drama of the Unwitnessed Moment</h3>
+            <p>Oudart and Miller, writing on suture theory, argue that cinema constructs a subject-position through the illusion of seamless continuity. This piece performs suture at the level of the gaze. While you fixate, the image is sutured—continuous, coherent, whole. The moment you look away, suture collapses.</p>
+
+            <p>But there is a deeper layer: <strong>what happens in the regions you are not looking at?</strong> Pixels are mutating. Declan's face is changing. The image is becoming-other. But you cannot see this while it is happening. The mutation occurs precisely <em>in the blind spot of your vision</em>.</p>
+
+            <h3>VII. Conclusion: Technosomatic Architecture in the Shower</h3>
+            <p>Technosomatic Architecture is the practice of making visible the collapse of embodied presence and digital archive, of somatic intensity and quantified tracking, of the narrative we suppose and the fragments from which it is stitched.</p>
+
+            <p>When you look, you are simultaneously present in your embodied gaze, absent in your tracked gaze, supposing a coherence that the image refuses, and witnessing the dissolution of that supposition. The shower promises privacy. The apparatus ensures exposure. The gaze insists on fragmentation. The supposition builds coherence. <strong>This is what it means to be embodied, archived, tracked, and stitched simultaneously.</strong></p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- TECHNICAL SPECIFICATION -->
+        <div class="section">
+            <h2>Technical Specification</h2>
+            <p><strong>Hardware:</strong> Tobii Eye Tracker 5 (120 Hz gaze sampling) paired with a Windows NUC mini-PC and NEC NP-UM330X ultra-short-throw projector (0.36:1 throw ratio, 3,300 lumens, native 1024×768 XGA). The complete apparatus occupies ~2 cubic feet and is mounted below or to the side of the shower cubicle, entirely hidden from the viewer's sight line.</p>
+
+            <p><strong>Software:</strong> Custom C# shader in Unity performs real-time gaze-responsive image processing. The core mechanism: a full-resolution source image (generated from Declan's 40,000+ photograph corpus using identity-preserving generative pipeline) undergoes continuous sub-threshold pixel-level cross-dissolve across the entire frame. Simultaneously, a sharp (~80px) circular window tracking the viewer's live gaze point (updated at 120 Hz) reveals the image at full clarity while the surrounding field remains blurred.</p>
+
+            <p><strong>Mixed Reality Layer:</strong> The physical shower cubicle—its tiling, water, architecture—is not altered. The digital intervention exists only in the projected image. Viewer sees: a blurred, semi-visible male figure in the shower space, with a small window of clarity following wherever their eye moves. The apparatus itself—tracker, projector, computer—is completely invisible to the viewer. Only the projection is visible. This invisible apparatus is the work's operative statement: surveillance and tracking infrastructure operating without the subject's awareness of being tracked.</p>
+
+            <p><strong>Temporal Behavior:</strong> While the viewer fixates on any point, pixels outside the sharp reveal window mutate imperceptibly (change rate calibrated below human perception threshold, ~0.5% per frame at 60 Hz). When gaze shifts (saccade), the saccadic masking window (natural blind spot during eye movement) hides the visual transition. Upon fixation on a new point, the accumulated mutation becomes visible—the regions previously fixated have already transformed. Exhibition-duration aging operates independently: across a week-long installation, Declan's image drifts along the real chronological trajectory of his 3-year image corpus, aging in clock time.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- SHORT STATEMENT -->
+        <div class="section">
+            <h2>Wall Text (Gallery Installation)</h2>
+            <div class="short-statement">
+                <p><strong>Fixation: Shower Cubicle</strong><br>
+                <em>A Technosomatic Architecture</em></p>
+
+                <p>The shower is a space of paradox: private embodied exposure, architecturally penetrable, digitally mapped. When you fixate your gaze on Declan in the shower, you perform four simultaneous acts: you are <em>present</em> in your embodied looking. You are <em>absent</em> in your tracked gaze. You <em>suppose</em> the image's coherence. You <em>witness</em> its dissolution.</p>
+
+                <p>While you fixate, pixels mutate beneath perception. The image appears stable because your fixation suppresses visibility of flux. The moment you look away, the mutation becomes visible—the face you supposed was continuous has already transformed. Coherence was never in the image. It was your supposition.</p>
+
+                <p>The eye-tracker maps your looking. The pixels record their flux. The shower records both. In Technosomatic Architecture, there is no separation between embodied presence and digital archive. They are the same moment, split into two registers. You look and are looked-at simultaneously. Declan is present and already-archived. The whole you suppose is built from fragments that are always in flux.</p>
+
+                <p>Narrative is supposition stitched from fragments. Presence is always already belated. The unwitnessed moment—the blind spot where you are not looking—is where coherence becomes-other. This is the drama of in-betweenness: not spatial, but temporal. The gap between fixation and the revelation that fixation was always already building a fiction.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- BIO SECTION -->
+        <div class="section bio-section">
+            <div class="bio-portrait">
+                <img src="natasha-portrait.jpg" alt="Natasha Bajc">
+                <div class="bio-name">Nataša Bajc</div>
+                <div class="bio-title">Founder & CEO<br>Nexus Hestia Technologies</div>
+            </div>
+
+            <div class="bio-content">
+                <p>Natasha Bajc is a Serbian-born, Los Angeles-based artist, architect, and researcher working at the intersection of the body, technology, and digital process. Her practice operates under the framework of <strong>Technosomatic Architecture</strong>—an inquiry into how the body is translated, processed, and returned altered through digital and material systems.</p>
+
+                <p>Bajc holds advanced training in architecture and computer science and has taught at the collegiate level in Los Angeles, with affiliations including SCI-Arc, UCLA, and USC. She gave one of the first TEDx talks in Belgrade in 2010, and participated in the Venice Biennale of Architecture in 2018. <em>The Loop of Being</em> was exhibited at the Beijing Biennale, 2025.</p>
+
+                <p>Her current body of work spans digital print on canvas, found object sculpture, holographic installation, large-scale interactive installation, and video. Bajc lives and works in Los Angeles.</p>
+
+                <p><strong>As Founder and CEO of <a href="https://nexushestia.com" target="_blank">Nexus Hestia Technologies</a>, Bajc develops sovereign AI infrastructure for the architecture, engineering, and construction sectors, integrating research at the intersection of artificial intelligence, spatial practice, and institutional memory systems.</strong></p>
+
+                <div class="bio-links">
+                    <span class="bio-links-label">Primary Practice</span>
+                    <ul class="bio-links-list">
+                        <li><a href="https://natashabajc.com" target="_blank">natashabajc.com — Full practice, CV, contact</a></li>
+                    </ul>
+
+                    <span class="bio-links-label">Exhibition Record</span>
+                    <ul class="bio-links-list">
+                        <li><a href="https://technosomaticarchitecture.vercel.app/" target="_blank">Technosomatic Architecture — Primary body of work</a></li>
+                        <li><a href="https://technosomatic-rendered.vercel.app/" target="_blank">Technosomatic — Rendered</a></li>
+                        <li><a href="https://technosomatic-nude.vercel.app/" target="_blank">Technosomatic — NUDE (Manifest Gallery Cincinnati)</a></li>
+                        <li><a href="https://technosomatic-holoscene.vercel.app/" target="_blank">Descending Data — Holoscene: Portrait of an Ego</a></li>
+                        <li><a href="https://technosomaticreal.vercel.app/" target="_blank">Technosomatic Real — Large-scale installation</a></li>
+                        <li><a href="https://theloopofbeing.vercel.app/" target="_blank">The Loop of Being — Beijing Biennale 2025</a></li>
+                    </ul>
+
+                    <span class="bio-links-label">Current Work</span>
+                    <ul class="bio-links-list">
+                        <li><a href="https://technosomatic-arc-athena.vercel.app/" target="_blank">Technosomatic Cyberfeminism 2.0 — ARC Gallery Athena Fund</a></li>
+                    </ul>
+
+                    <span class="bio-links-label">Company</span>
+                    <ul class="bio-links-list">
+                        <li><a href="https://nexushestia.com" target="_blank">Nexus Hestia Technologies — Sovereign AI Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <div class="bio-contact">
+                    <a href="mailto:natasha.bajc@nexushestia.com">natasha.bajc@nexushestia.com</a>
+                    <a href="mailto:natasha@natashabajc.com">natasha@natashabajc.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            Fixation: Shower Cubicle · Technosomatic Architecture · 2026<br>
+            Application for ZWISCHENLAND<br>
+            Friends Gallery Zurich
+        </div>
+    </div>
+</body>
+</html>
